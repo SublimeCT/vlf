@@ -2,10 +2,12 @@
   "name": "vlf",
   "version": "1.0.6",
   "description": "vue-localforage",
-  "main": "dist/vlf.js",
+  "typings": "./types/main.d.ts",
+  "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "build:ts": "parcel build src/main.ts --no-source-maps --global vlf"
   },
   "keywords": [
     "vue-localforage"
@@ -13,11 +15,15 @@
   "author": "dmlzj",
   "license": "ISC",
   "devDependencies": {
+    "@vue/cli-service": "^4.3.1",
+    "ts-loader": "^7.0.1",
+    "typescript": "^3.8.3",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "localforage": "^1.7.3"
+    "localforage": "^1.7.3",
+    "vue": "^2.6.11"
   },
   "repository": {
     "type": "git",

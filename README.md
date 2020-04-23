@@ -10,16 +10,16 @@
  -->
 # vlf
 vue-localforage 
-# Install
+## Install
 ```bash
 npm install  --save vlf
 ```
-# How to use vlf
+## How to use vlf
 ```javascript
 import Vlf from 'vlf'
 Vue.use(Vlf)
 ```
-# In your code
+## In your code
 ```javascript
 this.$vlf.createInstance({
     storeName: 'user'

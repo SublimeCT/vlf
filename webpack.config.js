@@ -12,9 +12,10 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: process.env.npm_config_entry || './src/index.js',
   output: {
     filename: 'vlf.js',
+    libraryTarget: 'commonjs2',
     path: path.resolve(__dirname, 'dist')
   }
 };
