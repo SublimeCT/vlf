@@ -2,29 +2,61 @@
   "name": "vlf",
   "version": "1.0.6",
   "description": "vue-localforage",
-  "main": "dist/vlf.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js"
+  "author": {
+    "name": "dmlzj"
   },
-  "keywords": [
-    "vue-localforage"
-  ],
-  "author": "dmlzj",
-  "license": "ISC",
+  "main": "lib/vlf.umd.min.js",
+  "browser": "lib/vlf.umd.min.js",
+  "typings": "types/main.d.ts",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:bundle": "vue-cli-service build --target lib --name vlf --dest lib src/main.ts",
+    "lint": "vue-cli-service lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "localforage": "^1.7.3",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^8.4.1"
+  },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "@vue/cli-plugin-babel": "~4.3.0",
+    "@vue/cli-plugin-eslint": "~4.3.0",
+    "@vue/cli-plugin-typescript": "~4.3.0",
+    "@vue/cli-service": "~4.3.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "typescript": "~3.8.3",
+    "vue-template-compiler": "^2.6.11",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
-  "dependencies": {
-    "localforage": "^1.7.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dmlzj/vlf.git"
-  },
+  "_id": "vlf@1.0.6",
   "bugs": {
     "url": "https://github.com/dmlzj/vlf/issues"
   },
-  "homepage": "https://github.com/dmlzj/vlf#readme"
+  "homepage": "https://github.com/dmlzj/vlf#readme",
+  "files": [
+    "lib/*",
+    "src/*",
+    "types/*.d.ts",
+    "package.json",
+    "*.js",
+    "README.md"
+  ],
+  "keywords": [
+    "vue-localforage"
+  ],
+  "license": "ISC",
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmlzj/vlf.git"
+  }
 }
